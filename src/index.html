@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Markdown Editor</title>
+    <base href="" />
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/base.min.css"
+      integrity="sha256-jVrlDF2G80Js0LHYlRISGXHNlCAc6PqCZa2kEYkVPE0="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/components.min.css"
+      integrity="sha256-LSQP3MbpDJypSUMHv6f7Zsdgd70/9jgNlSp+azQRdmg="
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/utilities.min.css"
+      integrity="sha256-BXYEhXZFTCpn5RjJhmrFi3Yr99OqOKIBQIJPnZ2iiS0="
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#1976d2" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script>
+      var shell = require("electron").shell;
+      //open links externally by default
+      $(document).on("click", 'a[href^="http"]', function(event) {
+        event.preventDefault();
+        shell.openExternal(this.href);
+      });
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBWc_KrLP3eWYWVOeqd2Uyq_SjHfNFe6BI",
+        authDomain: "markdown-cca6e.firebaseapp.com",
+        databaseURL: "https://markdown-cca6e.firebaseio.com",
+        projectId: "markdown-cca6e",
+        storageBucket: "",
+        messagingSenderId: "380726984442",
+        appId: "1:380726984442:web:96efabadc0646e46ac9343",
+        measurementId: "G-KDG58DJTCJ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      (function(sa, fbc) {
+        function load(f, c) {
+          var a = document.createElement("script");
+          a.async = 1;
+          a.src = f;
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(a, s);
+        }
+        load(sa);
+        window.onload = function() {
+          firebase.initializeApp(fbc).performance();
+        };
+      })(
+        "https://www.gstatic.com/firebasejs/7.0.0/firebase-performance-standalone.js",
+        firebaseConfig
+      );
+    </script>
+  </head>
+  <body class="dark-mode">
+    <app-root>Loading...</app-root>
+    <noscript
+      >Please enable JavaScript to continue using this application.</noscript
+    >
+  </body>
+</html>

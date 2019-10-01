@@ -1,0 +1,48 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.header {
+  height: 64px;
+  background: #2196f3;
+}
+
+
+.handle {
+  width: 8px;
+  background: #ddd;
+  cursor: ew-resize;
+  flex: 1;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: auto;
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 600%;
+  }
+
+  .content {
+    width: 0%;
+  }
+}

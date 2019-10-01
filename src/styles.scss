@@ -1,0 +1,264 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body[class='dark-mode'] {
+  --bg: #0f1119;
+  --text: #fff;
+  --text-color: #718096;
+  --shadow: rgba(27, 31, 46, 0.4);
+  --selected: #12151f;
+  --sidebar-shadow: rgba(39, 37, 39, 0.4);
+  --border: #3333337a;
+  --button: #1a202c;
+  --btn-hover: #2d3748;
+  --sidebar: #1a1c25;
+  --list-color: #556080;
+  --ernote-hov: #1a202c;
+  --note-main-text: #e2e8f0;
+  --note-sub-text: #718096;
+  --modal-bg: #1a202c;
+  --split-img: url('/assets/more-vertical.svg');
+
+  --blockquote: #ededed12;
+
+  --table-odd: #090b0f;
+  --table-even: #0f111a;
+  --table-border: #333;
+}
+
+body[class='light-mode'] {
+  --bg: #fff;
+  --text: #212121;
+  --shadow: rgba(0, 0, 0, 0.04);
+  --sidebar-shadow: rgba(26, 6, 6, 0.2);
+  --border: #3333330f;
+  --button: #edf2f7;
+  --btn-hover: #e2e8f0;
+  --sidebar: #edf2f7;
+  --list-color: #474747;
+  --selected: #e2e8f0;
+
+  --note-hover: #f7fafc;
+  --note-main-text: #4a5568;
+  --note-sub-text: #a0aec0;
+  --modal-bg: #3b434f;
+  --split-img: url('/assets/more-vertical-light.svg');
+  --blockquote: #edf2f6;
+
+  --table-odd: #f7fafc;
+  --table-even: #edf2f7;
+  --table-border: #a0aec0;
+}
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+::selection {
+  background: #79ffe1;
+}
+
+button:focus {
+  outline: 0;
+}
+
+html,
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--bg);
+  overflow: hidden;
+  color: var(--text);
+}
+
+.toggle-icon {
+  display: none;
+}
+
+.fe-icon {
+  width: 15px !important;
+  color: var(--text);
+  height: 16px !important;
+}
+
+.fe-icon:hover {
+  color: #718096;
+}
+
+.me-editable {
+  height: 80vh;
+  padding: 20px;
+  outline: 0 solid transparent;
+}
+
+.custom-class-h1 {
+  font-size: 200px;
+}
+
+.custom-class-h2 {
+  font-size: 15px;
+}
+
+.notelist {
+  border-bottom: 1px solid var(--border);
+  padding: 4px 16px;
+}
+
+.notelist .text-sm {
+  color: var(--note-main-text);
+}
+
+.notelist .text-xs {
+  color: var(--note-sub-text);
+}
+
+.notelist:hover {
+  background: var(--note-hover);
+}
+
+.mat-dialog-container {
+  background: var(--modal-bg);
+}
+
+.mat-dialog-title {
+  display: flex !important;
+  justify-content: space-between;
+  color: var(--note-sub-text);
+}
+
+.ph-badge {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 40px;
+  right: 0;
+  margin-right: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  color: #1d88e5;
+}
+
+blockquote {
+  font-size: 14px;
+  font-style: italic;
+  border-left: 3px solid #1d88e5;
+  line-height: 1.6;
+  position: relative;
+  background: var(--blockquote);
+  padding: 0.3rem 1rem;
+}
+
+p {
+  margin: 15px 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1.12em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.75em;
+}
+
+table,
+thead tr,
+tbody tr {
+  border: 1px solid var(--table-border);
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tr:nth-of-type(odd) {
+  background-color: var(--table-odd);
+}
+
+tr:nth-of-type(even) {
+  background-color: var(--table-even);
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul ul,
+ol ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 15px;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-latin;
+  list-style-position: inside;
+  margin-left: 15px;
+}
+
+.as-split-gutter-icon {
+  background: var(--sidebar);
+  background-image: var(--split-img) !important;
+}
+
+.emoji-add .mat-dialog-container {
+  padding: 0px !important;
+  background: unset !important;
+}
+
+.mat-dialog-container {
+  color: var(--text);
+  min-width: 500px;
+  background: var(--bg);
+}
+
+*.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button:disabled {
+  background: #494949 !important;
+  color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.close-icon {
+  font-size: 30px;
+}

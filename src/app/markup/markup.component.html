@@ -1,0 +1,18 @@
+<div class="split">
+  <as-split direction="horizontal" id="splitMain">
+    <as-split-area [size]="action.text">
+      <textarea
+        id="mArea"
+        class="variable-textarea"
+        [(ngModel)]="markdownData"
+        (ngModelChange)="textAreaEmpty()"
+        #scrollRaw
+      ></textarea>
+    </as-split-area>
+    <as-split-area [size]="action.markup" class="mark-pad">
+      <div #scrollMarkup>
+        <markdown [(data)]="markdownData"></markdown>
+      </div>
+    </as-split-area>
+  </as-split>
+</div>
