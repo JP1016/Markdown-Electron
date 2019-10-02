@@ -111,43 +111,127 @@ export const LICENCE = `# License
 
 export const SAMPLE =
   `
+  
+# 📖 Markdown Editor
 
-# Paper
+<img src="https://i.imgur.com/AWm93ID.png" width="100" height="100" />
 
-🚀A "no-cloud" note taking app with "no-internet" sharing.
+### ⚡Creating markdown made easy!!
 
-[![Paper](https://github.com/JP1016/Paper/blob/master/preview.png?raw=true 'Paper')]()
+${END_QUOTES}javascript
+🎉 Features
 
-✅ Live Preview: <a href="https://paperapp.now.sh/" target="_BLANK">https://paperapp.now.sh</a>
+  ${END_QUOTES}
 
-  <p align="center">
-   Made with ❤️ by <a href="https://twitter.com/JP1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"> </a>
-  </p>
+#### 👆One Click Licence, Contribution Guidelines Export
+
+#### 💾Load and Save Markdown to Indexed DB
+
+#### 🚀Copy/Download Markdown with one-click
+
+#### 🌟Auto Save for Markdowns
+
+#### 🌓Dark/Light Mode
+
+#### 🎎Resizable Split UI
+
+#### ✨Assist for Inserting Images/Link
+
+#### 🚅Save Frequently used Contributing Guidelines/Contributors/Licence on to local storage
+
+#### 📬Opens the recent file, that you were editing on resuming
+
+#### ⚛️ Electron & PWA app for offline use
+
+####  🔌 No Internet
+
+####  📖 OpenSource
 
 
-## Features
 
-🔥PWA Based
+Made with ❤️ by <a href="https://twitter.com/JP1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"> </a>
 
-📖 OpenSource
 
-⛓️ Easy Share
 
-🔌 No Internet
+${END_QUOTES}javascript
+🌟 Markdown Samples
 
-🖥️ LocalStorage
+  ${END_QUOTES}
 
-📠 Share through QR
 
-🌗 Dark/Light Theme
 
-## 🤝 Contributing
+| Formatting | Example |
+|--|--|
+| Bold Text  | **This is a bold text** |
+| Italics  | _This will be in italics_ |
+| Striked Text  |  ~~This will appear striked~~ |
+
+
+Heading - ### Sample H3 Header
+
+### Bullet List
+
+- Bullet 1
+- Bullet 2
+
+### Checkbox
+
+- [ ] Unchecked Checkbox
+- [x] Checked
+
+### Blockquote
+
+> This is a sample blockquote
+
+### Code
+
+${END_QUOTES}javascript
+let a = 1;
+(function () {
+  console.log("IIFE");
+})();
+${END_QUOTES}
+
+### Table
+| Name     | Purpose               |
+| -------- | --------------------- |
+| [Paper](https://paperapp.now.sh/)    | Note Taking App       |
+|[Markdown](https://mdown.now.sh) | Markdown Creation app |
+
+### Link
+
+[Markdown Web URL](https://mdown.now.sh)
+
+### Image
+Original Size
+![Markdown Logo](http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/terminal-icon.png)
+
+Custom Size
+<img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" width="200" height="200" />
+
+
+${END_QUOTES}javascript
+🔨 Stack
+  ${END_QUOTES}
+- Angular
+- Indexed DB
+- Electron
+
+
+
+
+${END_QUOTES}javascript
+🤝 Contributing
+  ${END_QUOTES}
 
 Contributions, issues and feature requests are welcome! 😍
 
-## Show your support
+Show your support
 
 Give a ⭐️ if this project helped you! 🥰
 
 If you like this app , Star it on Github, Follow me on Twitter
+
+Icons by FeatherIcons from https://feathericons.com
+
 `
