@@ -16,7 +16,6 @@ export class MarkupComponent implements OnInit {
   options = OPTION;
   markupCtrl = new FormControl();
   @ViewChild("markupPad", { static: false }) markupPad: ElementRef;
-
   @ViewChild('scrollRaw', { static: false }) scrollRaw: ElementRef;
   @ViewChild('scrollMarkup', { static: false }) scrollMarkup: ElementRef;
   markdownMode: Boolean = true;
@@ -26,6 +25,9 @@ export class MarkupComponent implements OnInit {
   };
   markdownData;
   currentMarkdown = null;
+
+
+
   constructor(
     private snackBar: MatSnackBar,
     private dialog: MatDialog,
@@ -40,27 +42,6 @@ export class MarkupComponent implements OnInit {
   }
 
 
-  updateScroll() {
-    const scrollOne = this.scrollRaw.nativeElement as HTMLElement;
-    const scrollTwo = this.scrollMarkup.nativeElement as HTMLElement;
-
-    console.log(scrollOne)
-    console.log(scrollTwo)
-    // do logic and set
-    scrollTwo.scrollLeft = scrollOne.scrollLeft;
-  }
-
-  appendMarkdownChange() {
-    const markdownCopy = (' ' + this.markdownData).slice(1);
-    this.triggerMarkdownChange();
-    this.markdownData = markdownCopy;
-    const escapeEvent: any = document.createEvent('CustomEvent');
-    escapeEvent.which = 27;
-    escapeEvent.initEvent('keypress', true, true);
-    document.getElementById("mArea").dispatchEvent(escapeEvent);
-    // this.markdownData = `${this.markdownData}
-    // `
-  }
   textAreaEmpty() {
     if (this.markdownData.length == 0) {
       this.triggerMarkdownChange();
@@ -69,8 +50,11 @@ export class MarkupComponent implements OnInit {
 
   @HostListener('window:beforeunload', ['$event'])
   beforeunloadHandler(event) {
+    localStorage.setItem("saving", "true");
+    localStorage.setItem("md", JSON.stringify(this.currentMarkdown))
     localStorage.setItem("recentItem", this.currentMarkdown.id);
   }
+
 
   saveFile() {
     interval(200).subscribe(_ => {
@@ -82,7 +66,9 @@ export class MarkupComponent implements OnInit {
             id: this.currentMarkdown.id,
             data: this.markdownData
           })
-          .subscribe(response => { }, error => { });
+          .subscribe(response => {
+          }, error => { });
+
       } else {
         localStorage.setItem("tempMarkdown", this.markdownData);
       }
@@ -92,14 +78,9 @@ export class MarkupComponent implements OnInit {
   loadRecent() {
     const id = localStorage.getItem("recentItem");
     if (id) {
-      this.indexedDbService.list("markdown_store").subscribe(res => {
-        for (const markdown of res) {
-          if (markdown.id == id) {
-            this.currentMarkdown = markdown;
-            this.markDownService.markdownFromLocalStorage.next(markdown);
-          }
-        }
-      });
+      this.currentMarkdown = JSON.parse(localStorage.getItem("md"));
+      this.markdownData = this.currentMarkdown.data;
+      this.markDownService.markdownFromLocalStorage.next(this.currentMarkdown);
     } else {
       this.markdownData = localStorage.getItem("tempMarkdown") || SAMPLE;
     }
@@ -116,6 +97,7 @@ export class MarkupComponent implements OnInit {
     this.newMarkdownListener();
     this.saveFile();
     this.loadRecent();
+
   }
 
   newMarkdownListener() {

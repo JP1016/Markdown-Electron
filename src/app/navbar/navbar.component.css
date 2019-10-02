@@ -510,3 +510,7 @@ mat-dialog-container {
   padding-top: 3px;
   color: #ff9301;
 }
+
+.file-icon {
+  margin-top: 4px
+}
