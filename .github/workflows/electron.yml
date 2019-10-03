@@ -25,10 +25,11 @@ jobs:
         run:  npm run electron:mac
       - name: see directory
         run: ls
-      - uses: jp1016/upload-to-release@master
+      - uses: lucyio/upload-to-release@master
         with:
-          name: jp1016/Markdown-Electron
+          name: JP1016/Markdown-Electron
           path: ./release
           action: unpublished
-          release-repo: jp1016/Markdown-Electron
-  
+          release_id: 1
+          release-repo: JP1016/Markdown-Electron
+
