@@ -30,6 +30,7 @@ jobs:
           name: JP1016/Markdown-Electron
           path: ./release
           action: unpublished
+          repo-token: 7eab213db750b78059e792be814e869c338c64e5
           release_id: 1
           release-repo: JP1016/Markdown-Electron
 
