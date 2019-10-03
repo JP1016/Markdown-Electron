@@ -126,7 +126,7 @@
         {{ fileName ? fileName : "Untitled" }}</span
       >
       <span *ngIf="fileName">
-        <i-feather class="fe-icon file-icon" name="file"></i-feather>
+        <i-feather class="fe-icon warning" name="file"></i-feather>
         {{ fileName }}</span
       >
 
@@ -138,6 +138,9 @@
           count="true"
         >
         </ntkme-github-button>
+      </a>
+      <a href="https://twitter.com/jp1016v1" target="_blank">
+        <i-feather class="fe-icon" name="twitter"></i-feather>
       </a>
 
       <a (click)="toggleMode()" class="pointer">

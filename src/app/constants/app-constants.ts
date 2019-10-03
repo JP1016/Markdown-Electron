@@ -73,19 +73,42 @@ export const TOOLBAR = Object.freeze({
 
 export const CONTRIBUTORS = `
 ## Contributors ✨
-Thanks goes to these wonderful people :
+
+Thanks goes to these wonderful people
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
 <table>
-    <tr>
-        <td align="center">
-            <a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;" alt="Kent C. Dodds" />
-                <br /><sub><b>Kent C. Dodds</b></sub></a>
-            <br /><a href="#question-kentcdodds" title="Answering Questions">💬</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#review-kentcdodds" title="Reviewed Pull Requests">👀</a> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
-        <td align="center">
-            <a href="https://github.com/jfmengels"><img src="https://avatars.githubusercontent.com/u/3869412?v=3" width="100px;" alt="Jeroen Engels" />
-                <br /><sub><b>Jeroen Engels</b></sub></a>
-            <br /><a href="https://github.com/all-contributors/all-contributors/commits?author=jfmengels" title="Documentation">📖</a> <a href="#review-jfmengels" title="Reviewed Pull Requests">👀</a> <a href="#tool-jfmengels" title="Tools">🔧</a></td>
-    </tr>
-</table>`
+	<tr>
+		<td align="center">
+			<a href="https://www.devzstudio.com">
+				<img src="https://avatars2.githubusercontent.com/u/5446313?s=460&v=4" width="100px;" alt="Jithin Pariyarath" />
+				<br />
+				<sub>
+					<b>Jithin Pariyarath</b>
+				</sub>
+			</a>
+			<br />
+			<a href="https://github.com/JP1016" title="Answering Questions">💬</a>
+			<a href="https://github.com/JP1016" title="Documentation">📖</a>
+			<a href="https://github.com/JP1016" title="Reviewed Pull Requests">👀</a>
+			<a href="https://github.com/JP1016" title="Talks">📢</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/jfmengels">
+				<img src="https://avatars2.githubusercontent.com/u/15993065?s=460&v=4" width="100px;" alt="Jijin Pariyarath" />
+				<br />
+				<sub>
+					<b>Jijin Pariyarath</b>
+				</sub>
+			</a>
+			<br />
+			<a href="https://github.com/pjijin" title="Documentation">📖</a>
+			<a href="https://github.com/pjijin" title="Reviewed Pull Requests">👀</a>
+			<a href="https://github.com/pjijin" title="Tools">🔧</a>
+		</td>
+		<tr>
+		</table>`
 
 export const CONTRIBUTION_GUIDE = `
 Contributing
@@ -111,127 +134,43 @@ export const LICENCE = `# License
 
 export const SAMPLE =
   `
-  
-# 📖 Markdown Editor
 
-<img src="https://i.imgur.com/AWm93ID.png" width="100" height="100" />
+# Paper
 
-### ⚡Creating markdown made easy!!
+🚀A "no-cloud" note taking app with "no-internet" sharing.
 
-${END_QUOTES}javascript
-🎉 Features
+[![Paper](https://github.com/JP1016/Paper/blob/master/preview.png?raw=true 'Paper')]()
 
-  ${END_QUOTES}
+✅ Live Preview: <a href="https://paperapp.now.sh/" target="_BLANK">https://paperapp.now.sh</a>
 
-#### 👆One Click Licence, Contribution Guidelines Export
-
-#### 💾Load and Save Markdown to Indexed DB
-
-#### 🚀Copy/Download Markdown with one-click
-
-#### 🌟Auto Save for Markdowns
-
-#### 🌓Dark/Light Mode
-
-#### 🎎Resizable Split UI
-
-#### ✨Assist for Inserting Images/Link
-
-#### 🚅Save Frequently used Contributing Guidelines/Contributors/Licence on to local storage
-
-#### 📬Opens the recent file, that you were editing on resuming
-
-#### ⚛️ Electron & PWA app for offline use
-
-####  🔌 No Internet
-
-####  📖 OpenSource
+  <p align="center">
+   Made with ❤️ by <a href="https://twitter.com/JP1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"> </a>
+  </p>
 
 
+## Features
 
-Made with ❤️ by <a href="https://twitter.com/JP1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"> </a>
+🔥PWA Based
 
+📖 OpenSource
 
+⛓️ Easy Share
 
-${END_QUOTES}javascript
-🌟 Markdown Samples
+🔌 No Internet
 
-  ${END_QUOTES}
+🖥️ LocalStorage
 
+📠 Share through QR
 
+🌗 Dark/Light Theme
 
-| Formatting | Example |
-|--|--|
-| Bold Text  | **This is a bold text** |
-| Italics  | _This will be in italics_ |
-| Striked Text  |  ~~This will appear striked~~ |
-
-
-Heading - ### Sample H3 Header
-
-### Bullet List
-
-- Bullet 1
-- Bullet 2
-
-### Checkbox
-
-- [ ] Unchecked Checkbox
-- [x] Checked
-
-### Blockquote
-
-> This is a sample blockquote
-
-### Code
-
-${END_QUOTES}javascript
-let a = 1;
-(function () {
-  console.log("IIFE");
-})();
-${END_QUOTES}
-
-### Table
-| Name     | Purpose               |
-| -------- | --------------------- |
-| [Paper](https://paperapp.now.sh/)    | Note Taking App       |
-|[Markdown](https://mdown.now.sh) | Markdown Creation app |
-
-### Link
-
-[Markdown Web URL](https://mdown.now.sh)
-
-### Image
-Original Size
-![Markdown Logo](http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/terminal-icon.png)
-
-Custom Size
-<img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" width="200" height="200" />
-
-
-${END_QUOTES}javascript
-🔨 Stack
-  ${END_QUOTES}
-- Angular
-- Indexed DB
-- Electron
-
-
-
-
-${END_QUOTES}javascript
-🤝 Contributing
-  ${END_QUOTES}
+## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! 😍
 
-Show your support
+## Show your support
 
 Give a ⭐️ if this project helped you! 🥰
 
 If you like this app , Star it on Github, Follow me on Twitter
-
-Icons by FeatherIcons from https://feathericons.com
-
 `
