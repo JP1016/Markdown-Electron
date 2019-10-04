@@ -25,12 +25,7 @@ jobs:
         run:  npm run electron:mac
       - name: see directory
         run: ls
-      - uses: lucyio/upload-to-release@master
-        with:
-          name: JP1016/Markdown-Electron
-          path: ./release
-          action: unpublished
-          repo-token: ${{DEPLOY_KEY}}
-          release_id: 1
-          release-repo: JP1016/Markdown-Electron
-
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
