@@ -30,7 +30,7 @@ jobs:
           name: JP1016/Markdown-Electron
           path: ./release
           action: unpublished
-          repo-token: ${DEPLOY_KEY}
+          repo-token: ${{DEPLOY_KEY}}
           release_id: 1
           release-repo: JP1016/Markdown-Electron
 
