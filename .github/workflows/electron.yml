@@ -27,13 +27,12 @@ jobs:
         run:  npm run electron:mac
       - name: see directory
         run: ls
-      - name: goto release dir
-        run: cd release
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+      - uses: lucyio/upload-to-release@master
         with:
-          body_path: ${{ github.workflow }}-CHANGELOG.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: JP1016/Markdown-Electron
+          path: ./release
+          action: unpublished
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release_id: 1
+          release-repo: JP1016/Markdown-Electron
 
