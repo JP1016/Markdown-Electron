@@ -35,4 +35,55 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           release_id: 1
           release-repo: JP1016/Markdown-Electron
+  build_on_win:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 10.16
+      - name: see directory
+        run: ls
+      - name: Install dependencies
+        run: npm install
+      - name: Build Electron
+        run:  npm run electron:windows
+      - name: see directory
+        run: ls
+      - uses: lucyio/upload-to-release@master
+        with:
+          name: JP1016/Markdown-Electron
+          path: ./release
+          action: published
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release_id: 1
+          release-repo: JP1016/Markdown-Electron
+  build_on_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 10.16
+      - name: see directory
+        run: ls
+      - name: Install dependencies
+        run: npm install
+      - name: Build Electron
+        run:  npm run electron:linux
+      - name: see directory
+        run: ls
+      - uses: lucyio/upload-to-release@master
+        with:
+          name: JP1016/Markdown-Electron
+          path: ./release
+          action: published
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          release_id: 1
+          release-repo: JP1016/Markdown-Electron
+
 
